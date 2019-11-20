@@ -1,0 +1,21 @@
+{
+    "name": "mycote/mycote",
+    "description": "这是我的描述",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "qq374098596",
+            "email": "374098596@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mycote\\composer\\": "src/Mycote/composer"
+        }
+    }
+}
