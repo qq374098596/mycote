@@ -1,7 +1,7 @@
 {
     "name": "mycote/mycote",
     "description": "这是我的描述",
-    "type": "project",
+    "type": "composer-plugin",
     "license": "MIT",
     "authors": [
         {
@@ -11,11 +11,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0.0"
+        "composer-plugin-api": "^1.1"
+    },
+    "extra": {
+        "class": "qq374098596\\mycote\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Mycote\\composer\\": "src/Mycote/composer"
+            "qq374098596\\mycote\\": "src/"
         }
     }
 }
