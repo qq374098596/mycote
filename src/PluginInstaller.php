@@ -11,7 +11,8 @@ class PluginInstaller extends LibraryInstaller
     public function getPackageBasePath(PackageInterface $package)
     {
         // $package->getPrettyName() 包的名字
-        $prefix = substr($package->getPrettyName(), 0, 23);
+        // $prefix = substr($package->getPrettyName(), 0, 23);
+        $prefix = $package->getPrettyName();
         
         if ('topthink/think' !== $prefix) {
             throw new \InvalidArgumentException(
@@ -21,7 +22,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-       return '/';
+       return '/' . $package->getPrettyName();
         // return './data/'.substr($package->getPrettyName(), 23);
     }
     /**
