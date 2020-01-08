@@ -7,7 +7,8 @@ class PluginInstaller extends LibraryInstaller
     /**
      * {@inheritDoc}
      */
-    public function getInstallPath(PackageInterface $package)
+    // public function getInstallPath(PackageInterface $package)
+    public function getPackageBasePath(PackageInterface $package)
     {
         // $package->getPrettyName() 包的名字
         $prefix = substr($package->getPrettyName(), 0, 23);
@@ -20,7 +21,8 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return './data/'.substr($package->getPrettyName(), 23);
+       return '/';
+        // return './data/'.substr($package->getPrettyName(), 23);
     }
     /**
      * {@inheritDoc}
