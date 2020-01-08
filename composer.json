@@ -9,7 +9,6 @@
             "email": "374098596@qq.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "composer-plugin-api": "^1.1"
     },
