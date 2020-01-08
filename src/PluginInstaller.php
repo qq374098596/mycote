@@ -20,7 +20,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return './data/wang/'.substr($package->getPrettyName(), 23);
+        return './think/'.substr($package->getPrettyName(), 23);
     }
     /**
      * {@inheritDoc}
