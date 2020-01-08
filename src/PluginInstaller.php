@@ -22,7 +22,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-       return '/' . $package->getPrettyName();
+       return './' . $package->getPrettyName();
         // return './data/'.substr($package->getPrettyName(), 23);
     }
     /**
