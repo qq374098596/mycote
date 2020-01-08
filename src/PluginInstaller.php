@@ -20,7 +20,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return './'.substr($package->getPrettyName(), 23);
+        return './test/'.substr($package->getPrettyName(), 23);
     }
     /**
      * {@inheritDoc}
