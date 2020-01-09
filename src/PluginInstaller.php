@@ -9,9 +9,15 @@ class PluginInstaller extends LibraryInstaller
     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         parent::install($repo, $package);
-        $this->filesystem->copy('./think/', './');
+        $this->filesystem->copyThenRemove('./data/', './');
     }
 
+    // public function install(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
+    // {
+    //     parent::update($repo, $initial, $target);
+    //     $this->filesystem->copy('./data/', './');
+    // }
+    
     /**
      * {@inheritDoc}
      */
@@ -30,7 +36,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return 'think';
+        return 'data';
         // return './think/'.substr($package->getPrettyName(), 23);
         // return './think/' . $package->getPrettyName();
     }
