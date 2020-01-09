@@ -1,6 +1,6 @@
 <?php
 
-namespace think\composer;
+namespace qq374098596\mycote;
 
 use Composer\Installer\LibraryInstaller;
 use Composer\Package\PackageInterface;
