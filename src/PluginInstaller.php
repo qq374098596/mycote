@@ -4,6 +4,12 @@ use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 class PluginInstaller extends LibraryInstaller
 {
+    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
+    {
+        parent::install($repo, $package);
+        $this->filesystem->copy($this->getInstallPath($package) . DIRECTORY_SEPARATOR . 'application/', '/');
+    }
+
     /**
      * {@inheritDoc}
      */
