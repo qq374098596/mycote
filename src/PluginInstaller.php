@@ -22,7 +22,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return './';
+        return 'think';
         // return './think/'.substr($package->getPrettyName(), 23);
         // return './think/' . $package->getPrettyName();
     }
