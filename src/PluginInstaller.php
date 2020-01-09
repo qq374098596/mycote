@@ -6,26 +6,18 @@ use Composer\Repository\InstalledRepositoryInterface;
 
 class PluginInstaller extends LibraryInstaller
 {
-    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
-    {
-        parent::install($repo, $package);
-        $this->filesystem->copyThenRemove('./data/', './');
-    }
-
-    // public function install(InstalledRepositoryInterface $repo, PackageInterface $initial, PackageInterface $target)
+    // public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     // {
-    //     parent::update($repo, $initial, $target);
-    //     $this->filesystem->copy('./data/', './');
+    //     parent::install($repo, $package);
+    //     $this->filesystem->copyThenRemove('./data/', './');
     // }
-    
+
     /**
      * {@inheritDoc}
      */
     public function getInstallPath(PackageInterface $package)
-    // public function getPackageBasePath(PackageInterface $package)
     {
         // $package->getPrettyName() 包的名字
-        // $prefix = substr($package->getPrettyName(), 0, 23);
         $prefix = $package->getPrettyName();
         
         if ('topthink/think' !== $prefix) {
@@ -36,7 +28,7 @@ class PluginInstaller extends LibraryInstaller
             );
         }
        // 返回指定路径
-        return 'data';
+        return '/think/';
         // return './think/'.substr($package->getPrettyName(), 23);
         // return './think/' . $package->getPrettyName();
     }

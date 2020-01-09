@@ -8,11 +8,10 @@ use Composer\Repository\InstalledRepositoryInterface;
 
 class PluginFramework extends Filesystem
 {
-     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
+    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
         parent::install($repo, $package);
-
-        $this->copyTestDir($package);
+        $this->filesystem->copyThenRemove('./thinkphp/', './think/thinkphp/');
     }
 
     /**
