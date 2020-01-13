@@ -8,9 +8,9 @@ class PluginInstaller extends LibraryInstaller
 {
     public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
     {
-        parent::install($repo, $package);
-        // $this->filesystem->copyThenRemove('./data/', './');
-        $this->filesystem->copyThenRemove("./thinkphp/", './think/thinkphp/');
+        // parent::install($repo, $package);
+        // // $this->filesystem->copyThenRemove('./data/', './');
+        // $this->filesystem->copyThenRemove("./thinkphp/", './think/thinkphp/');
     }
 
     /**
