@@ -6,12 +6,12 @@ use Composer\Repository\InstalledRepositoryInterface;
 
 class PluginInstaller extends LibraryInstaller
 {
-    // public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
-    // {
-    //     parent::install($repo, $package);
-    //     // $this->filesystem->copyThenRemove('./data/', './');
-    //     // $this->filesystem->copyThenRemove("./thinkphp/", './think/thinkphp/');
-    // }
+    public function install(InstalledRepositoryInterface $repo, PackageInterface $package)
+    {
+        parent::install($repo, $package);
+        // $this->filesystem->copyThenRemove('./data/', './');
+        $this->filesystem->copyThenRemove("./thinkphp/", './think/thinkphp/');
+    }
 
     /**
      * {@inheritDoc}
